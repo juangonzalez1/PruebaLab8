@@ -1,4 +1,4 @@
-package com.example.restservice;
+package com.example.springboot;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -13,7 +13,7 @@ public class CitiesController {
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/cities")
-	public Cities cities(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Cities(1,"Ourense","Ourense");
+	public com.example.springboot.Cities cities(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return new com.example.springboot.Cities(1,"Ourense","Ourense");
 	}
 }

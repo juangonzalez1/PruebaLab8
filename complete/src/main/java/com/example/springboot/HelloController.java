@@ -21,7 +21,7 @@ public class HelloController {
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Greeting(counter.incrementAndGet(), String.format(template, name));
+	public com.example.springboot.Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return new com.example.springboot.Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 }
