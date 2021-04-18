@@ -9,16 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CitiesController {
 
-	private static final ArrayList<Cities> cities = new ArrayList<Cities>();
+	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/cities")
-	public Cities cities() {
-		return new Cities("1", "Ourense","Ourense");
-	}
-
-	@GetMapping("/cities/{id}")
-	public Greeting greeting(@PathVariable Long id) {
-		return new Cities("1", "Ourense","Ourense");
+	public Cities cities(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return new Cities(1, "Ourense","Ourense");
 	}
 }
