@@ -14,6 +14,6 @@ public class CitiesController {
 
 	@GetMapping("/cities")
 	public Cities cities(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Cities(1,"Ourense","Ourense");
+		return new Cities(1,"Ourense","Ourensa");
 	}
 }
