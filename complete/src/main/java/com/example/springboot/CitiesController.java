@@ -26,8 +26,9 @@ public class CitiesController {
 	}
 
 	@GetMapping("/cities/{id}")
-	public Cities city(@PathVariable int id){
-		switch (id) {
+	public Cities city(@PathVariable Long id){
+		int i = (int) id;
+		switch (i) {
 			case 1:
 				return new Cities(1,"Ourense","Ourense");
 			case 2:
