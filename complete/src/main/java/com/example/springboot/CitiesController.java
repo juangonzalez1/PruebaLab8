@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class CitiesController {
 
 	@GetMapping("/cities/{id}")
 	public Cities city(@PathVariable Long id){
-		int i = (int) id;
+		int i = Integer.valueOf(Math.toIntExact(id));
 		switch (i) {
 			case 1:
 				return new Cities(1,"Ourense","Ourense");
