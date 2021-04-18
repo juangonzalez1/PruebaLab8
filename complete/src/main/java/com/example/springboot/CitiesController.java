@@ -13,7 +13,7 @@ public class CitiesController {
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/cities")
-	public com.example.springboot.Cities cities(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new com.example.springboot.Cities(1,"Ourense","Ourense");
+	public Cities cities(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return new Cities(1,"Ourense","Ourense");
 	}
 }
