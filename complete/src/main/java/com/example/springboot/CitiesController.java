@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CitiesController {
 
-	private static final String template = "Hello , %s!";
+	private static final String template = "Hello  , %s!";
 	private final AtomicLong counter = new AtomicLong();
 	ArrayList<Cities> citieslista = new ArrayList<Cities>();
 
