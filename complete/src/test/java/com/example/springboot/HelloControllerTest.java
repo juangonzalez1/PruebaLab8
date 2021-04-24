@@ -31,6 +31,6 @@ public class HelloControllerTest {
 	public void getCities() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/cities").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("[{"id":1,"name":"Ourense","province":"Ourense"},{"id":2,"name":"Vigo","province":"Pontevedra"},{"id":3,"name":"Lugo","province":"Lugo"},{"id":4,"name":"Coruña","province":"Coruña"},{"id":5,"name":"Santiago","province":"Coruña"}]")));
+				.andExpect(jsonPath("$[0].name", is("Ourense")));
 	}
 }
