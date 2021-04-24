@@ -3,3 +3,5 @@ jdk:
 - openjdk8
 script:
 - test/run.sh
+before_install:
+  - chmod +x run.sh
