@@ -75,7 +75,7 @@ public class CitiesController {
 				return new University(5,"USC","Santiago");
 
 			default:
-				return new Cities(0,"Default","Default");
+				return new University(0,"Default","Default");
 		}
 	}
 }
