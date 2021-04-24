@@ -29,9 +29,12 @@ public class CitiesController {
 
 	@GetMapping("/universities")
 	public ArrayList<University> cities() {
-		unislista.add(new University(1,"UDC","Coruña"));
-		unislista.add(new University(2,"USC","Santiago"));
-		unislista.add(new University(3,"UVIGO","Ourense,Vigo"));
+		unislista.add(new University(1,"UVIGO","Ourense"));
+		unislista.add(new University(2,"UVIGO","Vigo"));
+		unislista.add(new University(3,"USC","Lugo"));
+		unislista.add(new University(4,"UDC","Coruña"));
+		unislista.add(new University(5,"USC","Santiago"));
+
 		return unislista;
 	}
 
