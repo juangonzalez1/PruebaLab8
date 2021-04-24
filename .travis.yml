@@ -4,4 +4,4 @@ jdk:
 script:
 - test/run.sh
 before_install:
-  - chmod +x run.sh
+  - chmod +x test/run.sh
