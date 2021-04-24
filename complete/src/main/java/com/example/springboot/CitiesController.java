@@ -28,7 +28,7 @@ public class CitiesController {
 	}
 
 	@GetMapping("/universities")
-	public ArrayList<University> cities() {
+	public ArrayList<University> unis() {
 		unislista.add(new University(1,"UVIGO","Ourense"));
 		unislista.add(new University(2,"UVIGO","Vigo"));
 		unislista.add(new University(3,"USC","Lugo"));
