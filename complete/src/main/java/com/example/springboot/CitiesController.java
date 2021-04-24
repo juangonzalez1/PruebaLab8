@@ -58,4 +58,24 @@ public class CitiesController {
 				return new Cities(0,"Default","Default");
 		}
 	}
+
+	@GetMapping("/universities/{id}")
+	public University uni(@PathVariable Long id){
+		int i = Integer.valueOf(Math.toIntExact(id));
+		switch (i) {
+			case 1:
+				return new University(1,"UVIGO","Ourense");
+			case 2:
+				return new University(2,"UVIGO","Vigo");
+			case 3:
+				return new University(3,"USC","Lugo");
+			case 4:
+				return new University(4,"UDC","Coruña");
+			case 5:
+				return new University(5,"USC","Santiago");
+
+			default:
+				return new Cities(0,"Default","Default");
+		}
+	}
 }
