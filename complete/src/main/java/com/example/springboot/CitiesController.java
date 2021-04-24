@@ -14,6 +14,7 @@ public class CitiesController {
 	private static final String template = "Hello  , %s!";
 	private final AtomicLong counter = new AtomicLong();
 	ArrayList<Cities> citieslista = new ArrayList<Cities>();
+	ArrayList<University> unislista = new ArrayList<University>();
 
 
 	@GetMapping("/cities")
@@ -25,6 +26,18 @@ public class CitiesController {
 		citieslista.add(new Cities(5,"Santiago","Coruña"));
 		return citieslista;
 	}
+
+	@GetMapping("/universities")
+	public ArrayList<University> cities() {
+		unislista.add(new University(1,"UVIGO","Ourense"));
+		unislista.add(new University(2,"UVIGO","Vigo"));
+		unislista.add(new University(3,"USC","Lugo"));
+		unislista.add(new University(4,"UDC","Coruña"));
+		unislista.add(new University(5,"USC","Santiago"));
+
+		return unislista;
+	}
+
 
 	@GetMapping("/cities/{id}")
 	public Cities city(@PathVariable Long id){
