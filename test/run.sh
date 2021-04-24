@@ -3,6 +3,8 @@ cd $(dirname $0)
 
 cd ../complete
 
+chmod +x gradlew
+
 ./gradlew test --rerun-tasks --stacktrace
 
 ret=$?
