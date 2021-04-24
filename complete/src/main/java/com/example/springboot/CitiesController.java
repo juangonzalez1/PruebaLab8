@@ -34,6 +34,7 @@ public class CitiesController {
 		unislista.add(new University(3,"USC","Lugo"));
 		unislista.add(new University(4,"UDC","Coruña"));
 		unislista.add(new University(5,"USC","Santiago"));
+
 		return unislista;
 	}
 
